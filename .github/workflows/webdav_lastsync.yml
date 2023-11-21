@@ -1,0 +1,20 @@
+name: webdav_lastsync
+
+on:
+  schedule:
+    - cron: '0 4,16 * * *'
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Fix
+        run: |
+          export SYNCFILE="lastsync.txt"
+          export REMOTEFILE=" https://dav.jianguoyun.com/dav/zotero/${SYNCFILE}"
+          touch ${SYNCFILE}
+          curl -u ${1145470720@qq.com}:${a3pmtp7b4neszsay} -T ${SYNCFILE} ${REMOTEFILE}
+        env:
+          KOOFR_EMAIL: ${{ secrets.1145470720@qq.com }}
+          KOOFR_DAVPASS: ${{ secrets.a3pmtp7b4neszsay }}
