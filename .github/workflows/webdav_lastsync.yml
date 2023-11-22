@@ -12,9 +12,9 @@ jobs:
       - name: Fix
         run: |
           export SYNCFILE="lastsync.txt"
-          export REMOTEFILE=" https://dav.jianguoyun.com/dav/zotero/${SYNCFILE}"
+          export REMOTEFILE="https://dav.jianguoyun.com/dav/zotero/${SYNCFILE}"
           touch ${SYNCFILE}
-          curl -u ${1145470720@qq.com}:${a3pmtp7b4neszsay} -T ${SYNCFILE} ${REMOTEFILE}
+          curl -u ${KOOFR_EMAIL}:${KOOFR_DAVPASS} -T ${SYNCFILE} ${REMOTEFILE}
         env:
-          KOOFR_EMAIL: ${{ secrets.1145470720@qq.com }}
-          KOOFR_DAVPASS: ${{ secrets.a3pmtp7b4neszsay }}
+          KOOFR_EMAIL: ${{ 1145470720@qq.com }}
+          KOOFR_DAVPASS: ${{ a3pmtp7b4neszsay }}
