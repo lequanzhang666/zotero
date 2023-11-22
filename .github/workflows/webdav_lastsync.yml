@@ -16,5 +16,5 @@ jobs:
           touch ${SYNCFILE}
           curl -u ${KOOFR_EMAIL}:${KOOFR_DAVPASS} -T ${SYNCFILE} ${REMOTEFILE}
         env:
-          KOOFR_EMAIL: ${{secrets.1145470720@qq.com}}
-          KOOFR_DAVPASS: ${{secrets.a3pmtp7b4neszsay}}
+          KOOFR_EMAIL: ${{ secrets.KOOFR_EMAIL }}
+          KOOFR_DAVPASS: ${{ secrets.KOOFR_DAVPASS}}
